@@ -7,34 +7,36 @@
    change — the buttons will start working automatically.
    ============================================================ */
 const SELAR_LINKS = {
-  lavender:   "",   // e.g. "https://selar.co/707-lavender"
-  saffron:    "",
-  rosebuds:   "",
-  calendula:  "",
-  spearmint:  "",
-  lemongrass: "",
-  honey:      "",
+  miracleleaf: "",
+  holybasil:   "",
+  rosebuds:    "",
+  calendula:   "",
+  spearmint:   "",
+  lemongrass:  "",
+  honey:       "",
 };
 
 /* ============ Tea catalog ============ */
 const TEAS = [
   {
-    slug:"lavender",
-    name:"Lavender",
+    slug:"miracleleaf",
+    name:"Miracle Leaf",
     price:"₦5,000",
-    color:"#7a6fa3",
-    hook:"For the nights your mind won't quiet.",
-    benefits:["Calms the nervous system","Supports deeper, slower sleep","Eases tension headaches"],
-    brew:"1 tsp buds in 250ml just-off-boil water. Steep 5–7 min, covered. Sip about 30 minutes before bed.",
+    color:"#3f6d4a",
+    photo:"./assets/miracle-leaf.jpg",
+    hook:"The quiet healer your body's been asking for.",
+    benefits:["Supports kidney and urinary health","Eases coughs and respiratory tightness","Calms inflammation from the inside out"],
+    brew:"Steep 4–5 fresh or dried leaves in 250ml hot (not boiling) water. Cover and rest 8–10 min. Sip warm on an empty stomach.",
   },
   {
-    slug:"saffron",
-    name:"Saffron",
+    slug:"holybasil",
+    name:"Holy Basil (Tulsi)",
     price:"₦5,000",
-    color:"#c97b2a",
-    hook:"A few golden threads. A brighter mood.",
-    benefits:["Lifts mood naturally","Sharpens focus through the afternoon","Rich in plant antioxidants"],
-    brew:"4–5 threads in hot water. Steep 8 min until the cup turns gold. A spoon of honey rounds it out beautifully.",
+    color:"#4a6b3a",
+    photo:"./assets/holy-basil.jpg",
+    hook:"For the days the world feels a little too loud.",
+    benefits:["Adaptogen — softens stress and steadies mood","Strengthens daily immunity","Helps balance blood sugar gently"],
+    brew:"1 tsp dried tulsi in 250ml just-off-boil water. Steep 6–8 min, covered. Best in the late afternoon when the day starts to weigh.",
   },
   {
     slug:"rosebuds",
@@ -87,9 +89,12 @@ const HONEY = {
 /* ============ Render shop ============ */
 function teaCard(t, isHoney=false){
   const benefits = t.benefits.map(b=>`<li>${b}</li>`).join("");
+  const photoStyle = t.photo
+    ? `background-image:linear-gradient(135deg, ${t.color}aa, ${shade(t.color,-25)}aa), url('${t.photo}');background-size:cover;background-position:center;`
+    : `background:linear-gradient(135deg, ${t.color}, ${shade(t.color,-25)})`;
   return `
     <article class="tea-card ${isHoney?"honey-card":""} reveal" data-slug="${t.slug}">
-      <div class="tea-photo" style="background:linear-gradient(135deg, ${t.color}, ${shade(t.color,-25)})">
+      <div class="tea-photo" style="${photoStyle}">
         <span>${t.name}</span>
       </div>
       <div class="tea-body">
