@@ -8,7 +8,7 @@
    ============================================================ */
 const SELAR_LINKS = {
   miracleleaf: "https://selar.com/57541011p5",
-  holybasil:   "",
+  holybasil:   "https://selar.com/4972gpj46v",
   rosebuds:    "",
   calendula:   "",
   spearmint:   "",
@@ -21,7 +21,7 @@ const TEAS = [
   {
     slug:"miracleleaf",
     name:"Miracle Leaf",
-    price:"₦5,000",
+    price:"₦7,000",
     color:"#3f6d4a",
     photo:"./assets/miracle-leaf.jpg",
     hook:"The quiet healer your body's been asking for.",
@@ -31,7 +31,7 @@ const TEAS = [
   {
     slug:"holybasil",
     name:"Holy Basil (Tulsi)",
-    price:"₦5,000",
+    price:"₦7,000",
     color:"#4a6b3a",
     photo:"./assets/holy-basil.jpg",
     hook:"For the days the world feels a little too loud.",
@@ -41,7 +41,7 @@ const TEAS = [
   {
     slug:"rosebuds",
     name:"Rose Buds",
-    price:"₦5,000",
+    price:"₦7,000",
     color:"#c9637a",
     hook:"Soft on the heart. Glow from within.",
     benefits:["Clears the skin from the inside","Gently balances hormones","Soothes the gut after meals"],
@@ -50,7 +50,7 @@ const TEAS = [
   {
     slug:"calendula",
     name:"Calendula",
-    price:"₦5,000",
+    price:"₦7,000",
     color:"#d99227",
     hook:"Sunshine in a cup — for healing days.",
     benefits:["Soothes inflammation","Supports digestion","A gentle, daily detox"],
@@ -59,7 +59,7 @@ const TEAS = [
   {
     slug:"spearmint",
     name:"Spearmint",
-    price:"₦5,000",
+    price:"₦7,000",
     color:"#5a9a6e",
     hook:"Clear skin, clear head — every morning.",
     benefits:["Balances hormones over time","Reduces bloating fast","Wakes the mind without caffeine"],
@@ -68,7 +68,7 @@ const TEAS = [
   {
     slug:"lemongrass",
     name:"Lemongrass",
-    price:"₦5,000",
+    price:"₦7,000",
     color:"#aab748",
     hook:"Bright. Citrus. Alive.",
     benefits:["Aids digestion","Strengthens immunity","Natural energy, no jitters"],
